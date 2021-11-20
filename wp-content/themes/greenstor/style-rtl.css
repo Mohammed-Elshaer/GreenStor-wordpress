@@ -51,12 +51,12 @@ body{
     }
     
     /*widget*/
-    .elshaer-widget h4{
+    .Elshaer-widget h4{
         width: 50%;
     border-bottom: 1px dotted var(--primary-color);
     padding: 1rem 0;
     }
-    .elshaer-widget li{
+    .Elshaer-widget li{
         width: 70%;
     border-bottom: 1px dotted #555;
     padding: .5rem 0;

@@ -1,4 +1,7 @@
 <?php
+// theme support دعم القالب لاشياء عديدة
+
+add_theme_support('post-thumbnails');
 
     function Elshaer_enqueue_stylesheets(){
 
