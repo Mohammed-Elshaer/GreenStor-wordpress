@@ -48,15 +48,16 @@ body{
     .elshaer-widget h4{
         width: 50%;
     border-bottom: 1px dotted var(--primary-color);
+
     }
     
     /*widget*/
-    .Elshaer-widget h4{
+    .elshaer-widget h4,h2{
         width: 50%;
-    border-bottom: 1px dotted var(--primary-color);
-    padding: 1rem 0;
+        border-bottom: 1px dotted var(--primary-color);
+        padding: 1rem 0;
     }
-    .Elshaer-widget li{
+    .elshaer-widget li{
         width: 70%;
     border-bottom: 1px dotted #555;
     padding: .5rem 0;
@@ -186,6 +187,83 @@ body{
        
         
     }
+    /*single*/
+#single{
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-gap: 1rem;
+}
+#single .card{
+    margin: .5rem;
+}
+#single .single-content .card .artical-header{
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/*sidebar*/
+
+#single .elshaer-widget:first-child h4{
+    width: 100%;
+    border-bottom: 1px dotted #fff;
+}
+#single aside  .card:first-child{
+    background-color: var(--secondrary-color);
+    color: #fff;
+    text-align: center;
+}
+
+/*responsive single*/
+@media(max-width:768px){
+    #single{
+        grid-template-columns: 1fr ;
+        justify-items: center;
+    }
+}
+
+ /* search form */
+/* سيرش فورم ده تاج خاص بالورد بريس */
+#main-header .container #searchform input{
+    font-family:    'Changa', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+}
+
+#main-header #searchform input[id='s']{
+    width: 50%;
+    padding: .5rem;
+    color: var(--primary-color);
+  }
+#main-header #searchform label[for='s']{
+   display: none;
+}
+#main-header #searchform input[id='s']:focus{
+  border: 1px solid var(--primary-color);
+}
+#main-header #searchform input[id='searchsubmit']{
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: .5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+    /*responsive search*/
+@media(max-width:768px){
+    #main-header #searchform input[id='s']{
+       width: 100%;
+       margin-bottom: 1rem;
+      }
+      #main-header #searchform input[id='searchsubmit']{
+       display: block;
+       width: 100%;
+      }
+}
+
+
+
      /*footer*/
      #main-footer{
         background-color: var(--dark-color);
@@ -235,5 +313,20 @@ body{
         }
     }
     
-    
-    
+   
+    /* pagination */
+#pagination .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#pagination .container div{
+    margin:1rem;
+}
+#pagination .container a{
+   background-color:var(--primary-color);
+   color:#fff;
+   padding:.5rem;
+   border-radius:5px;
+}

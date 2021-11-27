@@ -20,25 +20,36 @@ add_action('init', 'Elshaer_register_menus');
 //Elshaer widgets
 
 function Elshaer_register_widgets(){
+//sidebar
+$sidebar = array(
+    'name' => 'Sidebar',
+    'id' => 'sidebar',
+    'before_widget' => '<div id="%1$s" class="widget card Elshaer-widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+);
+register_sidebar($sidebar);
+
+    //footer
     $footer1 = array(
         'name' => 'Footer Column 1',
         'id' => 'footer1',
         'before_widget' => '<div id="%1$s" class="widget Elshaer-widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
     );
     register_sidebar($footer1);
-}
-add_action('widgets_init', 'Elshaer_register_widgets');
+
 
 $footer2 = array(
     'name' => 'Footer Column 2',
     'id' => 'footer2',
     'before_widget' => '<div id="%1$s" class="widget Elshaer-widget %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h4>',
-    'after_title' => '</h4>'
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
 );
 register_sidebar($footer2);
 
@@ -47,7 +58,11 @@ $footer3 = array(
     'id' => 'footer3',
     'before_widget' => '<div id="%1$s" class="widget Elshaer-widget %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h4>',
-    'after_title' => '</h4>'
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
 );
 register_sidebar($footer3);
+
+}
+
+add_action('widgets_init', 'Elshaer_register_widgets');

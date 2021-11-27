@@ -125,5 +125,6 @@
             </div>
         </article> -->
     </div>
+    <?php get_template_part('pagination'); ?>
 </section>
 <?php get_footer(); ?>
